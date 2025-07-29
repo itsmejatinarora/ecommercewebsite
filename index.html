@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-commerce website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">ShopMate</div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Categories &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Men Clothing</a></li>
+            <li><a href="#">Women Clothing</a></li>
+            <li><a href="#">Men Accessories</a></li>
+            <li><a href="#">Women Accessories</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="right-actions">
+        <div class="cart-icon">🛒</div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Discover the Latest Trends</h1>
+        <p>
+          Shop top brands, best prices, and fast delivery. Your one-stop shop
+          for everything!
+        </p>
+        <button class="shop-btn">Shop Now</button>
+      </div>
+      <div class="hero-image">
+        <img src="images/ecommerce-banner.jpg" alt="E-commerce Banner" />
+      </div>
+    </section>
+
+    <section class="product-categories">
+      <h2>🛍️ Shop by Category</h2>
+      <div class="categories-container">
+        <div class="category-card" onclick="filterCategory('Clothing')">
+          <img src="images/clothing.jpg" alt="Clothing" />
+          <h3>Clothing</h3>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Shoes')">
+          <img src="images/shoes.jpg" alt="Shoes" />
+          <h3>Shoes</h3>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Accessories')">
+          <img src="images/accessories.jpg" alt="Accessories" />
+          <h3>Accessories</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products" id="featured">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img
+            src="images/men cargo.jpg"
+            alt="men-cargo"
+          />
+          <h3>MENS CARGO</h3>
+          <p class="price">$899</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="images/men-cordset.jpg"
+            alt="men-cordset"
+          />
+          <h3>MENS CORDSET</h3>
+          <p class="price">$129.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="images/men-jacket.jpg"
+            alt="men-jacket"
+          />
+          <h3>MENS JACKET</h3>
+          <p class="price">$59.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="images/men-jeans.jpg"
+            alt="men-jeans"
+          />
+          <h3>MENS JEANS</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="images/men-shirt.jpg"
+            alt="men-shirt"
+          />
+          <h3>MENS SHIRT</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="images/men-short-kurta.jpg"
+            alt="men-short-kurta"
+          />
+          <h3>MENS SHORT KURTA</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="images/men-bracelet.jpg"
+            alt="men-bracelet"
+          />
+          <h3>MENS BRACELET</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="images/men-necklace.jpg"
+            alt="men-necklace"
+          />
+          <h3>MENS NECKLACE</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="images/men-sunglasses.jpg"
+            alt="men-sunglasses"
+          />
+          <h3>MENS SUNGLASSES</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="images/women-cordset.jpg"
+            alt="women-cordset"
+          />
+          <h3>WOMENS CORDSET</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="images/women-kurti.jpg"
+            alt="women-kurti"
+          />
+          <h3>WOMENS KURTI</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="images/women-shirt.jpg"
+            alt="women-shirt"
+          />
+          <h3>WOMENS SHIRT</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="images/women-suit.jpg"
+            alt="women-suit"
+          />
+          <h3>WOMENS SUIT</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="images/women-bracelet.jpg"
+            alt="women-bracelet"
+          />
+          <h3>WOMENS BRACELET</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="images/women-jewellery.jpg"
+            alt="women-jewellery"
+          />
+          <h3>WOMENS JEWELLERY</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="images/shoes-redtape.jpg"
+            alt="shoes-redtape"
+          />
+          <h3>REDTAPE SHOES MEN</h3>
+          <p class="price">$49.99</p>
+          <div class="stars">⭐️⭐️⭐️⭐️☆</div>
+          <div class="product-buttons">
+            <button class="btn">Add to Cart</button>
+            <button class="btn-outline">View</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="limited-offer">
+      <div class="offer-content">
+        <h2>⏰ Limited-Time Offer</h2>
+        <p>
+          Get up to <strong>50% OFF</strong> on our best-selling styles. Don’t
+          miss out!
+        </p>
+        <div class="countdown" id="countdown">
+          <span id="days">00</span><small>D</small> : <span id="hours">00</span
+          ><small>H</small> : <span id="minutes">00</span><small>M</small> :
+          <span id="seconds">00</span><small>S</small>
+        </div>
+        <a href="#" class="shop-now-btn">Shop the Deal</a>
+      </div>
+    </section>
+
+    <script>
+      //Limited time offer
+      const offerEndDate = new Date("2026-04-19T23:59:59").getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = offerEndDate - now;
+
+        if (distance < 0) {
+          document.getElementById("countdown").innerHTML = "Offer Expired";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = String(days).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("hours").innerHTML = String(hours).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("minutes").innerHTML = String(minutes).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("seconds").innerHTML = String(seconds).padStart(
+          2,
+          "0"
+        );
+      }
+
+      setInterval(updateCountdown, 1000);
+    </script>
+
+    <!-- Review Section -->
+    <section class="review-section">
+      <div class="review-header">
+        <h2>Customer Reviews</h2>
+        <button class="toggle-review-form">Write a Review</button>
+      </div>
+
+      <form class="review-form hidden">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <textarea
+          id="message"
+          rows="4"
+          placeholder="Write your review..."
+          required
+        ></textarea>
+        <div class="rating-input">
+          <label>Your Rating:</label>
+          <div class="stars">
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+          </div>
+        </div>
+        <input type="hidden" id="selectedRating" value="0" />
+        <button type="submit">Submit Review</button>
+      </form>
+
+      <div class="reviews" id="reviewList">
+        <!-- Reviews will be injected here -->
+      </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Join Our Newsletter</h2>
+        <p>
+          Subscribe now and get exclusive offers & latest updates straight to
+          your inbox!
+        </p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email address"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-message" id="newsletterMessage"></p>
+      </div>
+    </section>
+
+    <script>
+      //newsletter-signup
+      const newsletterForm = document.getElementById("newsletterForm");
+      const newsletterEmail = document.getElementById("newsletterEmail");
+      const newsletterMessage = document.getElementById("newsletterMessage");
+
+      newsletterForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = newsletterEmail.value.trim();
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if (!emailPattern.test(email)) {
+          newsletterMessage.textContent = "Please enter a valid email address.";
+          newsletterMessage.style.color = "#000";
+          return;
+        }
+
+        // Success Message
+        newsletterMessage.textContent = "Thank you for subscribing!";
+        newsletterMessage.style.color = "#d4ffd4";
+
+        // Reset Form
+        newsletterEmail.value = "";
+
+        // Optional: Send data to server or use localStorage
+        // localStorage.setItem("newsletterEmail", email);
+      });
+    </script>
+
+    <!-- Loyalty Program Section -->
+    <section class="loyalty-section">
+      <div class="loyalty-header">
+        <h2>Join Our Loyalty Program</h2>
+        <p>Earn points on every purchase and unlock exciting rewards!</p>
+      </div>
+
+      <div class="loyalty-tabs">
+        <button class="tab-btn active" data-tab="benefits">Benefits</button>
+        <button class="tab-btn" data-tab="how">How It Works</button>
+        <button class="tab-btn" data-tab="join">Join Now</button>
+      </div>
+
+      <div class="tab-content active" id="benefits">
+        <ul class="loyalty-list">
+          <li>🎁 Earn 1 point per $1 spent</li>
+          <li>🚚 Free shipping for members</li>
+          <li>💎 Early access to sales</li>
+          <li>🎉 Birthday surprise gifts</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="how">
+        <ul class="loyalty-list">
+          <li>🛍 Shop your favorite products</li>
+          <li>📈 Collect points on every order</li>
+          <li>🎯 Redeem for discounts or gifts</li>
+          <li>📬 Stay updated via email</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="join">
+        <form class="join-form" id="joinForm">
+          <input
+            type="text"
+            placeholder="Your Name"
+            id="loyaltyName"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            id="loyaltyEmail"
+            required
+          />
+          <button type="submit">Join for Free</button>
+        </form>
+        <p class="join-message" id="joinMessage"></p>
+      </div>
+    </section>
+
+    <script>
+      //loyalty-program
+      // Tab switcher
+      const tabButtons = document.querySelectorAll(".tab-btn");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          const tab = button.getAttribute("data-tab");
+          tabContents.forEach((content) => {
+            content.classList.remove("active");
+            if (content.id === tab) content.classList.add("active");
+          });
+        });
+      });
+
+      // Form validation
+      const joinForm = document.getElementById("joinForm");
+      const loyaltyName = document.getElementById("loyaltyName");
+      const loyaltyEmail = document.getElementById("loyaltyEmail");
+      const joinMessage = document.getElementById("joinMessage");
+
+      joinForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = loyaltyName.value.trim();
+        const email = loyaltyEmail.value.trim();
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if (!name || !emailPattern.test(email)) {
+          joinMessage.textContent = "Please enter a valid name and email.";
+          joinMessage.style.color = "#ffdddd";
+          return;
+        }
+
+        joinMessage.textContent = `Thanks, ${name}! You've joined the loyalty program.`;
+        joinMessage.style.color = "#d4ffd4";
+
+        // Optional: Send data to backend or save locally
+        loyaltyName.value = "";
+        loyaltyEmail.value = "";
+      });
+    </script>
+
+    <!-- Social Media Integration Section -->
+    <section class="social-media-section">
+      <h2>Connect With Us</h2>
+      <p>
+        Follow us on social media and stay updated on exclusive deals & product
+        launches!
+      </p>
+
+      <div class="social-icons">
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          class="icon instagram"
+          title="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          class="icon facebook"
+          title="Facebook"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          class="icon twitter"
+          title="Twitter"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a
+          href="https://youtube.com"
+          target="_blank"
+          class="icon youtube"
+          title="YouTube"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a
+          href="https://pinterest.com"
+          target="_blank"
+          class="icon pinterest"
+          title="Pinterest"
+        >
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+      </div>
+
+      <div class="copy-link-message" id="copyMessage"></div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Brand Info -->
+        <div class="footer-col">
+          <h3>ShopMate</h3>
+          <p>
+            Your one-stop shop for everything trendy, affordable, and reliable.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-col">
+          <h4>Helpful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <!-- online store Links -->
+        <div class="footer-col">
+          <h4>Online Store </h4>
+          <ul>
+            <li><a href="#">Men Clothing</a></li>
+            <li><a href="#">Women Clothing</a></li>
+            <li><a href="#">Men Accessories</a></li>
+            <li><a href="#">Women Accessories</a></li>
+       
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h4>Partners</h4>
+          <p>Zara</p>
+          <p>Levis</p>
+          <p>Adidass</p>
+          <p>Spark</p>
+          <p>Allen Solly</p>
+          <p>+ Many More</p>
+      
+        </div>
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>Email: support@shopmate.com</p>
+          <p>Phone: +1 234 567 8901</p>
+          <p>Address: 123 Fashion St, New York, NY</p>
+        </div>
+         <!-- Social Icons -->
+     <div class="footer-bottom">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>&copy; 2025 ShopMate. All rights reserved.</p>
+      <button id="scrollTopBtn" title="Back to Top">&#8679;</button>
+    </div>
+    </footer>
+    
+
+    <script>
+      //footer
+      // Newsletter form
+      const footerForm = document.getElementById("footerNewsletter");
+      const footerEmail = document.getElementById("footerEmail");
+      const footerMsg = document.getElementById("footerMsg");
+
+      footerForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = footerEmail.value.trim();
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if (!emailPattern.test(email)) {
+          footerMsg.textContent = "Please enter a valid email.";
+          footerMsg.style.color = "#ffdddd";
+        } else {
+          footerMsg.textContent = "Subscribed successfully!";
+          footerMsg.style.color = "#d4ffd4";
+          footerEmail.value = "";
+        }
+      });
+
+      // Scroll to top button
+      const scrollBtn = document.getElementById("scrollTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          scrollBtn.style.display = "block";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      });
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
